@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaskController;
-
+use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +26,7 @@ Route::get('/task/list', [TaskController::class, 'list']);
 // テスト用
 Route::get('/welcome', [WelcomeController::class, 'index']);
 Route::get('/welcome/second', [WelcomeController::class, 'second']);
+
+// 入力テスト用
+Route::get('/test', [TestController::class, 'index']);
+Route::post('/test/input', [TestController::class, 'input']);
